@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>curse_project</AssemblyName>
+    <Name>curse_project</Name>
+    <RootNamespace>curse_project</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.6.364\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.6.364\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega32 -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.6.364\include\</Value>
+      <Value>../APP/LIB</Value>
+      <Value>../MACL</Value>
+      <Value>../MACL/DIO</Value>
+      <Value>../MACL/ADC</Value>
+      <Value>../HAL/LED</Value>
+      <Value>../HAL/P_B</Value>
+      <Value>../HAL/S_SEG</Value>
+      <Value>../HAL/TEMP_S</Value>
+      <Value>../MACL/TIMER</Value>
+      <Value>../MACL/TWI</Value>
+      <Value>../HAL/EEPROM</Value>
+      <Value>../HAL/HEAT_COOL_RELAY</Value>
+      <Value>../MACL/EX_INT</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.6.364\include\</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="APP\LIB\BIT_MATH.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\LIB\STD_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM_24C16.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\EEPROM\EEPROM_24C16.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\HEAT_COOL_RELAY\HEAT_COOL_RELAY.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\HEAT_COOL_RELAY\HEAT_COOL_RELAY.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\HEAT_COOL_RELAY\HEAT_COOL_RELAY_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED\LED_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\P_B\P_B.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\P_B\P_B.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\P_B\P_B_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\S_SEG\S_SEG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\S_SEG\S_SEG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\S_SEG\S_SEG_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\TEMP_S\TEMP_S.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\TEMP_S\TEMP_S.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\TEMP_S\TEMP_S_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\ADC\ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\ADC\ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\ADC\ADC_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\DIO\DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\DIO\DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\DIO\DIO_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\EX_INT\EX_INT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\EX_INT\EX_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\EX_INT\EX_INT_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\REG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\TIMER\TIMER.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\TIMER\TIMER.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\TIMER\TIMER_CFG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\TWI\TWI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MACL\TWI\TWI.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="APP" />
+    <Folder Include="APP\LIB" />
+    <Folder Include="HAL" />
+    <Folder Include="HAL\LED" />
+    <Folder Include="HAL\EEPROM" />
+    <Folder Include="HAL\HEAT_COOL_RELAY" />
+    <Folder Include="HAL\TEMP_S" />
+    <Folder Include="HAL\S_SEG" />
+    <Folder Include="HAL\P_B" />
+    <Folder Include="MACL" />
+    <Folder Include="MACL\DIO" />
+    <Folder Include="MACL\ADC" />
+    <Folder Include="MACL\EX_INT" />
+    <Folder Include="MACL\TWI" />
+    <Folder Include="MACL\TIMER" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
